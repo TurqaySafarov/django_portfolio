@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1>Portfolio Yarat</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="ad">Ad</label>
+            <input type="text" class="form-control" id="ad" name="ad" placeholder="Adınızı daxil edin">
+        </div>
+        <div class="form-group">
+            <label for="soyad">Soyad</label>
+            <input type="text" class="form-control" id="soyad" name="soyad" placeholder="Soyadınızı daxil edin">
+        </div>
+        <!-- Diğer form alanları buraya eklenebilir -->
+        <button type="submit" class="btn btn-primary">Yarat</button>
+    </form>
+</div>
+{% endblock %}
